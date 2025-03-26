@@ -5,8 +5,7 @@ st.set_page_config(layout="wide")
 
 # Customize the sidebar
 markdown = """
-A Streamlit map template
-<https://github.com/opengeos/streamlit-map-template>
+A Streamlit map for visualizing IFR procedures in Kigali International Airport.
 """
 
 st.sidebar.title("About")
@@ -37,5 +36,5 @@ st.markdown(markdown)
 
 m = leafmap.Map(center=[-1.967,30.133],zoom=10,minimap_control=True)
 #m.add_basemap("OpenTopoMap")
-m.add_basemap("xyz.Esri.WorlTopoMap")
+m.add_basemap("Esri.WorlTopoMap")
 m.to_streamlit(height=1024)
