@@ -15,7 +15,7 @@ logo = "https://i.imgur.com/UbOXYAU.png"
 st.sidebar.image(logo)
 
 # Customize page title
-st.title("Streamlit for Geospatial Applications")
+st.title("IFR Procedures visualization in Kigali International Airport")
 
 st.markdown(
     """
@@ -35,6 +35,7 @@ markdown = """
 
 st.markdown(markdown)
 
-m = leafmap.Map(minimap_control=True)
-m.add_basemap("OpenTopoMap")
-m.to_streamlit(height=500)
+m = leafmap.Map(center=[-1.967,30.133],zoom=10,minimap_control=True)
+#m.add_basemap("OpenTopoMap")
+m.add_basemap("xyz.Esri.WorlTopoMap")
+m.to_streamlit(height=1024)
